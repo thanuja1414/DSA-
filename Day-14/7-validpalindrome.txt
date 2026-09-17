@@ -1,0 +1,94 @@
+MY APPROACH : 
+
+ 
+TC - O(n) ,  SC - O(n)
+
+class Solution {
+public:
+    bool isPalindrome(string s) {
+
+        int left = 0;
+        int right = s.length()-1;
+
+        while(left < right){
+
+            if(!isalnum(s[left])){
+                left++;
+                continue;
+            }
+            if(!isalnum(s[right])){
+                right--;
+                continue;
+            }
+
+            s[left] = tolower(s[left]);
+            s[right] = tolower(s[right]);
+            
+            if(s[left]!=s[right]){
+               return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+        
+    }
+};
+
+
+SPACE EFFICIENT : TWO POINTER APPROACH
+
+bool isPalindrome(string s) {
+    int left = 0;
+    int right = s.length() - 1;
+
+    while(left < right) {
+
+        if(!isalnum(s[left])) {
+            left++;
+            continue;
+        }
+
+        if(!isalnum(s[right])) {
+            right--;
+            continue;
+        }
+
+        if(tolower(s[left]) != tolower(s[right])) {
+            return false;
+        }
+
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
+CLEANING THE STRING FIRST BUT SC - O(n) : 
+
+bool isPalindrome(string s) {
+
+    string cleaned = "";
+
+    for(char c : s) {
+        if(isalnum(c)) {
+            cleaned += tolower(c);
+        }
+    }
+
+    int left = 0;
+    int right = cleaned.length() - 1;
+
+    while(left < right) {
+
+        if(cleaned[left] != cleaned[right]) {
+            return false;
+        }
+
+        left++;
+        right--;
+    }
+
+    return true;
+}
