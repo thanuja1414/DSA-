@@ -6,7 +6,7 @@ using namespace std;
 int majorityElement(vector<int>nums){
     int freq = 0,ans=0;
     for(int i=0;i<nums.size();i++){
-        if(freq==0){ // if only single element in array exists
+        if(freq==0){ // The current candidate has no remaining votes, so choose the current element as the new candidate.
             ans=nums[i];
         }
         if(nums[i]==ans){
