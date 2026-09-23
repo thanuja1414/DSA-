@@ -1,0 +1,13 @@
+problem statement :
+
+there are N books and each book has A[i] number of pages.
+
+you have to allocate books to M number of students so that maximum no.of pages allocated to a student is minimum.
+
+. each book should be allocated to a student.
+. each student has to be allocated atleast one book.
+. allotment should be in contiguous order.
+
+calculate and return the minimum possible number.
+
+return "-1" if valid assignment is not possiblee.
