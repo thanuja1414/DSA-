@@ -1,0 +1,7 @@
+aggressive cows problem statement : 
+
+Assign C cows to N stalls such that min distance btw them is largest return largest minimum distance.
+
+contraint : 2<= min no.of cows <=no.of stalls
+
+another variation of book allocation problem.
