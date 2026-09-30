@@ -1,0 +1,41 @@
+algorithms : 
+
+sorting
+
+.sort(arr,arr+n) -> start index and end(index of garbage value after last index arr+(n-1)) index(generally not include)
+.sort(arr,arr+n,greater<int>())->sort in descending order
+.sort(vec.begin(),vec.end())
+
+reverse
+
+.reverse(vec.begin(),vec.end())
+.reverse(vec.begin()+num,vec.begin()+num2) -> reverse elements within a range
+
+next permutation
+
+.next_permutation(v.begin(),v.end())
+
+swap() , min() , max()
+
+
+max and min element -> deference before using them.
+
+.max_element(v.begin(),v.end())
+.min_element(v.begin(),v.end())
+
+binary search -> gives 1 if element exists else gives 0.
+
+.binary_search(v.begin(),v.end(),target)
+
+
+count set bits
+
+.__builtin_popcount() -> counts no of 1's exist in the binary format of a 32-bit(4-bytes) decimal number.
+.__builtin_popcountl() -> for long integers
+.__builtin_popcountll() -> for long long integers
+
+
+
+
+
+
