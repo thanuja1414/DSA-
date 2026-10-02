@@ -1,0 +1,49 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+//alphanumeric characters - [a-z] , [A-Z] , [0-9]
+
+
+//O(n)
+bool checkPalindrome(string s){
+
+    int st = 0;
+    int end = s.length()-1;
+
+    while(st<end){
+        if(isalnum(s[st])){
+            st++;
+            continue;
+        }
+        if(isalnum(s[end])){
+            end--;
+            continue;
+        }
+        if(tolower(s[st])!=tolower(s[end])){
+            return false;
+        }
+        st++;
+        end--;
+        
+    }
+    return true;
+
+}
+
+int main(){
+
+    string s  = "A man , a plan , a canal: Panama";
+    cout<<checkPalindrome(s);
+    return 0;
+}
+
+
+// we can use this code to check for alphanum
+// bool isAlphaNum(char ch){
+//     if(ch >= 0 && ch<= 9 || tolower(ch)>='a' && tolower(ch)<='z'){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
