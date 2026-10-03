@@ -12,11 +12,11 @@ bool checkPalindrome(string s){
     int end = s.length()-1;
 
     while(st<end){
-        if(isalnum(s[st])){
+        if(!isalnum(s[st])){
             st++;
             continue;
         }
-        if(isalnum(s[end])){
+        if(!isalnum(s[end])){
             end--;
             continue;
         }
